@@ -10,3 +10,6 @@ UTC=true
 EOF
 
 sudo ln -sf /usr/share/zoneinfo/"$TIMEZONE" /etc/localtime
+
+# NTP Sync service
+# On Amazon Linux 2, chrony is already installed and configured to use the Amazon Time Sync Service IP address.
