@@ -10,6 +10,18 @@
       "type": "amazon-ebs",
       "profile": "{{ user `aws_profile` }}",
       "region": "{{ user `aws_region` }}",
+      // Add another more automated way
+      //"source_ami_filter": {
+      //  "filters": {
+      //    "virtualization-type": "hvm",
+      //    "name": "amzn-ami-*-amazon-ecs-optimized",
+      //    "root-device-type": "ebs"
+      //  },
+      //  "owners": [
+      //    "amazon"
+      //  ],
+      //  "most_recent": true
+      //},
       "source_ami": "ami-0e3a9308d8f475421",
       "instance_type": "{{ user `instance_type` }}",
       "ssh_username": "ec2-user",
